@@ -96,11 +96,15 @@ Easiest path — open Termux and clone the repo:
 
 ```bash
 pkg update -y && pkg install -y git
-git clone https://github.com/r87977052-blip/Claude-code-.git
+git clone -b arena/01a100f1-claude-code https://github.com/r87977052-blip/Claude-code-.git
 cd Claude-code-
 ```
 
-Or copy just `mobile/install.sh` to the phone and run `bash install.sh`.
+(`mobile/` lives on the `arena/01a100f1-claude-code` branch, hence the `-b`.)
+
+Or copy just `mobile/install.sh` to the phone — it is self-contained — and run
+`bash install.sh`. To put it on the phone without git: upload it to Google Drive
+and `termux-setup-storage` once, then `cp /sdcard/Download/install.sh ~`.
 
 ### 3.3 Run the installer
 
